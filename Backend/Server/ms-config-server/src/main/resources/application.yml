@@ -1,0 +1,18 @@
+server:
+  port: 7070
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/JosueGabriel0/PROYECTO-INTEGRADOR-C5-G1.git
+          searchPaths: Backend/Server/config-data/ms-server, Backend/Server/config-data/ms-service
+          #username:
+          #password:
+          default-label: config-server
+  security:
+    user:
+      name: root
+      password: 123456

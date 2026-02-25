@@ -1,0 +1,174 @@
+server:
+  port: 9090
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8090/eureka}
+  instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]': # Aplica CORS a todas las rutas
+            allowedOrigins:
+              - "http://localhost:3000"  # Permite cualquier origen
+            allowedHeaders:
+              - "*"  # Permite todos los encabezados
+            allowedMethods:
+              - "*"  # Permite todos los métodos (GET, POST, PUT, DELETE, etc.)
+            allowCredentials: true  # Permite el envío de credenciales (como cookies, encabezados de autenticación)
+
+      discovery:
+        locator:
+          enable: true
+
+      routes:
+        - id: ms-auth-service
+          uri: lb://ms-auth-service
+          predicates:
+            - Path=/auth/**, /api/email/**
+
+        - id: ms-usuarios-service
+          uri: lb://ms-usuarios-service
+          predicates:
+            - Path=/usuario/**
+
+        - id: ms-roles-service
+          uri: lb://ms-roles-service
+          predicates:
+            - Path=/rol/**
+          filters:
+            - AuthFilter
+
+        - id: ms-inscripciones-service
+          uri: lb://ms-inscripciones-service
+          predicates:
+            - Path=/inscripcion/**
+          filters:
+            - AuthFilter
+
+        #- id: ms-realTimeChat-service
+          #uri: lb://ms-realTimeChat-service
+          #predicates:
+            #- Path=/ws/**
+
+        - id: ms-persona-service
+          uri: lb://ms-persona-service
+          predicates:
+            - Path=/persona/**
+          filters:
+            - AuthFilter
+
+        - id: ms-administrador-service
+          uri: lb://ms-administrador-service
+          predicates:
+            - Path=/administrador/**
+          filters:
+            - AuthFilter
+
+        - id: ms-calendarioAcademico-service
+          uri: lb://ms-calendarioAcademico-service
+          predicates:
+            - Path=/calendarioAcademico/**
+          filters:
+            - AuthFilter
+
+        - id: ms-carrera-service
+          uri: lb://ms-carrera-service
+          predicates:
+            - Path=/carrera/**
+          filters:
+            - AuthFilter
+
+        - id: ms-curso-service
+          uri: lb://ms-curso-service
+          predicates:
+            - Path=/curso/**
+          filters:
+            - AuthFilter
+
+        - id: ms-docente-service
+          uri: lb://ms-docente-service
+          predicates:
+            - Path=/docente/**
+          filters:
+            - AuthFilter
+
+        - id: ms-estudiante-service
+          uri: lb://ms-estudiante-service
+          predicates:
+            - Path=/estudiante/**, /responsableFinanciero/**
+          filters:
+            - AuthFilter
+
+        - id: ms-administrativo-service
+          uri: lb://ms-administrativo-service
+          predicates:
+            - Path=/administrativo/**
+          filters:
+            - AuthFilter
+
+        - id: ms-evaluacionAcademica-service
+          uri: lb://ms-evaluacionAcademica-service
+          predicates:
+            - Path=/evaluacionAcademica/**
+          filters:
+            - AuthFilter
+
+        - id: ms-materialesEducativos-service
+          uri: lb://ms-materialesEducativos-service
+          predicates:
+            - Path=/materialesEducativos/**
+          filters:
+            - AuthFilter
+
+        - id: ms-planificacionAcademica-service
+          uri: lb://ms-planificacionAcademica-service
+          predicates:
+            - Path=/planificacionAcademica/**, /ciclo/**
+          filters:
+            - AuthFilter
+
+        - id: ms-matriculas-service
+          uri: lb://ms-matriculas-service
+          predicates:
+            - Path=/matricula/**
+          filters:
+            - AuthFilter
+
+        - id: ms-pagos-service
+          uri: lb://ms-pagos-service
+          predicates:
+            - Path=/pago/**
+          filters:
+            - AuthFilter
+
+        - id: ms-requisitosAcademicos-service
+          uri: lb://ms-requisitosAcademicos-service
+          predicates:
+            - Path=/requisito/**
+          filters:
+            - AuthFilter
+
+        - id: ms-nivelesDeEnsenanza-service
+          uri: lb://ms-nivelesDeEnsenanza-service
+          predicates:
+            - Path=/nivelEnsenanza/**, /opcionNivel/**, /cicloDetalle/**, /cursoDetalle/**, /horario/**, /horarioDetalle/**
+          filters:
+            - AuthFilter
+
+        - id: ms-cuentaFinancieraUniversitaria-service
+          uri: lb://ms-cuentaFinancieraUniversitaria-service
+          predicates:
+            - Path=/cuentaFinanciera/**, /movimientoAcademico/**, /voucher/**, /saldoAFavor/**
+          filters:
+            - AuthFilter
+
+logging:
+  level:
+    org.springframework.web: DEBUG
