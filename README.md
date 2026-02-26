@@ -171,6 +171,7 @@ cd matriculas-universitarias
 Crear la base de datos en MySQL:
 
 CREATE DATABASE `ms-administrador`;
+
 CREATE DATABASE `ms-administrativo`;
 CREATE DATABASE `ms-calendarioacademico`;
 CREATE DATABASE `ms-carrera`;
@@ -203,6 +204,7 @@ spring:
     url: jdbc:mysql://localhost:3306/ms-administrador (etc.)
     username: root
     password: tu_password
+
 ### 3️⃣ Ejecutar los microservicios
 mvn spring-boot:run
 ### 4️⃣ Ejecutar el frontend
