@@ -140,11 +140,13 @@ Autenticación con JWT
 
 Autorización por roles:
 
-ADMIN
+ADMINISTRADOR
 
-DOCENTE
+ADMINISTRATIVO
 
 ESTUDIANTE
+
+DOCENTE
 
 Protección de endpoints
 
