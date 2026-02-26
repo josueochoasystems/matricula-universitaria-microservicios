@@ -20,7 +20,7 @@ Despliegue autónomo de servicios
 
 La aplicación está dividida en microservicios independientes que se comunican mediante APIs REST.
 
-🔹 Componentes principales
+### 🔹 Componentes principales
 
 Frontend: React
 
