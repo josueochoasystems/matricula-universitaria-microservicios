@@ -1,8 +1,8 @@
-🎓 Sistema de Matrículas Universitarias
+# 🎓 Sistema de Matrículas Universitarias
 
 Sistema web para la gestión integral de matrículas universitarias desarrollado con Spring Boot, MySQL, React y arquitectura de Microservicios.
 
-📌 Descripción
+## 📌 Descripción
 
 El Sistema de Matrículas Universitarias permite administrar el proceso académico de inscripción de estudiantes en cursos, controlando cupos, validaciones y registros históricos.
 
@@ -16,7 +16,7 @@ Fácil mantenimiento
 
 Despliegue autónomo de servicios
 
-🏗️ Arquitectura del Sistema
+## 🏗️ Arquitectura del Sistema
 
 La aplicación está dividida en microservicios independientes que se comunican mediante APIs REST.
 
@@ -38,8 +38,8 @@ Gestión centralizada: API Gateway
 
 Configuración distribuida: Config Server
 
-🧠 Fundamento Teórico
-🔹 Spring Boot
+## 🧠 Fundamento Teórico
+### 🔹 Spring Boot
 
 Framework basado en Spring que permite crear aplicaciones Java rápidamente con mínima configuración.
 
@@ -53,7 +53,7 @@ Seguridad integrada
 
 Creación rápida de APIs REST
 
-🔹 React
+### 🔹 React
 
 Biblioteca de JavaScript desarrollada por Meta Platforms para construir interfaces de usuario dinámicas basadas en componentes reutilizables.
 
@@ -67,7 +67,7 @@ Alta eficiencia
 
 Gran ecosistema
 
-🔹 MySQL
+### 🔹 MySQL
 
 Sistema de gestión de bases de datos relacional ampliamente utilizado en aplicaciones web.
 
@@ -81,7 +81,7 @@ Alto rendimiento
 
 Open Source
 
-🔹 Arquitectura de Microservicios
+### 🔹 Arquitectura de Microservicios
 
 Es un estilo arquitectónico donde una aplicación se divide en servicios pequeños e independientes que:
 
@@ -103,7 +103,7 @@ Mejor mantenimiento
 
 Escalabilidad granular
 
-⚙️ Funcionalidades
+## ⚙️ Funcionalidades
 👨‍🎓 Gestión de Estudiantes
 
 Registro de estudiantes
@@ -114,7 +114,7 @@ Eliminación lógica
 
 Consulta por código
 
-📚 Gestión de Cursos
+### 📚 Gestión de Cursos
 
 Creación de cursos
 
@@ -124,7 +124,7 @@ Gestión de docentes
 
 Control de cupos
 
-📝 Gestión de Matrículas
+### 📝 Gestión de Matrículas
 
 Inscripción en cursos
 
@@ -134,7 +134,7 @@ Control de duplicidad
 
 Historial académico
 
-🔐 Seguridad
+### 🔐 Seguridad
 
 Autenticación con JWT
 
@@ -150,7 +150,7 @@ DOCENTE
 
 Protección de endpoints
 
-🔄 Flujo de Funcionamiento
+## 🔄 Flujo de Funcionamiento
 
 El usuario interactúa con la interfaz en React.
 
@@ -162,11 +162,11 @@ El microservicio procesa la solicitud y accede a su base de datos MySQL.
 
 La respuesta retorna al cliente.
 
-🚀 Instalación y Ejecución
-1️⃣ Clonar el repositorio
+## 🚀 Instalación y Ejecución
+### 1️⃣ Clonar el repositorio
 git clone https://github.com/tuusuario/matriculas-universitarias.git
 cd matriculas-universitarias
-2️⃣ Configurar la base de datos
+### 2️⃣ Configurar la base de datos
 
 Crear la base de datos en MySQL:
 
@@ -203,14 +203,14 @@ spring:
     url: jdbc:mysql://localhost:3306/ms-administrador (etc.)
     username: root
     password: tu_password
-3️⃣ Ejecutar los microservicios
+### 3️⃣ Ejecutar los microservicios
 mvn spring-boot:run
-4️⃣ Ejecutar el frontend
+### 4️⃣ Ejecutar el frontend
 cd frontend
 npm install
 npm start
 
-🧪 Pruebas
+## 🧪 Pruebas
 
 Pruebas unitarias con JUnit
 
@@ -218,7 +218,7 @@ Pruebas de integración
 
 Testing del frontend con Jest
 
-📈 Mejoras Futuras
+## 📈 Mejoras Futuras
 
 Contenerización con Docker
 
@@ -230,7 +230,7 @@ Implementación de CI/CD
 
 Monitoreo con Prometheus y Grafana
 
-📜 Licencia
+## 📜 Licencia
 
 Este proyecto está bajo la licencia MIT.
 
