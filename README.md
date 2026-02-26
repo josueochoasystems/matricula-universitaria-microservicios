@@ -104,7 +104,7 @@ Mejor mantenimiento
 Escalabilidad granular
 
 ## ⚙️ Funcionalidades
-👨‍🎓 Gestión de Estudiantes
+### 👨‍🎓 Gestión de Estudiantes
 
 Registro de estudiantes
 
