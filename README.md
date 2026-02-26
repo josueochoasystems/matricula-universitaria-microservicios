@@ -163,9 +163,14 @@ El microservicio procesa la solicitud y accede a su base de datos MySQL.
 La respuesta retorna al cliente.
 
 ## 🚀 Instalación y Ejecución
+
 ### 1️⃣ Clonar el repositorio
-git clone https://github.com/tuusuario/matriculas-universitarias.git
-cd matriculas-universitarias
+
+git clone https://github.com/josueochoasystems/matricula-universitaria-microservicios.git
+
+cd matricula-universitaria-microservicios
+
+
 ### 2️⃣ Configurar la base de datos
 
 Crear la base de datos en MySQL:
