@@ -271,10 +271,6 @@ Implementación de CI/CD
 
 Monitoreo con Prometheus y Grafana
 
-## 📜 Licencia
-
-Este proyecto está bajo la licencia MIT.
-
 ---
 
 ## 👨‍💻 Autor
